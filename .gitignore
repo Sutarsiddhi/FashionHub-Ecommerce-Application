@@ -1,0 +1,48 @@
+# OS and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python / Django
+__pycache__/
+*.py[cod]
+*.pyd
+*.sqlite3
+*.log
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.venv/
+venv/
+env/
+ENV/
+
+# Django local and generated files
+backend/.env
+backend/db.sqlite3
+backend/media/
+staticfiles/
+
+# Node / frontend
+node_modules/
+dist/
+dist-ssr/
+coverage/
+*.tsbuildinfo
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+
+# Build and cache
+.cache/
+.parcel-cache/
+.turbo/
+.sass-cache/
+tmp/
+temp/
