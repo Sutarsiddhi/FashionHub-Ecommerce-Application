@@ -54,11 +54,14 @@ Django_Ecommerce_project/
 Backend Setup
 Go to the backend folder:
 cd backend
+
 Create and activate a virtual environment:
 python -m venv venv
 venv\Scripts\activate
+
 Install backend dependencies:
 pip install django djangorestframework django-cors-headers djangorestframework-simplejwt psycopg2-binary python-dotenv pillow razorpay
+
 Create a .env file inside the backend folder:
 DB_NAME=your_database_name
 DB_USER=your_database_user
@@ -68,47 +71,61 @@ DB_PORT=5432
 
 RAZORPAY_KEY_ID=your_razorpay_key_id
 RAZORPAY_KEY_SECRET=your_razorpay_key_secret
+
 Apply migrations:
 python manage.py migrate
+
 Create a superuser:
 python manage.py createsuperuser
+
 Run the backend server:
 python manage.py runserver
+
 Backend will run at:
 
 http://127.0.0.1:8000
+
 Frontend Setup
 Go to the frontend folder:
 cd frontend
 Install frontend dependencies:
 npm install
+
 Create a .env file inside the frontend folder:
 VITE_DJANGO_BASE_URL=http://127.0.0.1:8000
 VITE_RAZORPAY_KEY_ID=your_razorpay_key_id
+
 Start the frontend development server:
 npm run dev
+
 Frontend will run at:
 
 http://localhost:5173
+
 API Endpoints
+
 Authentication
 POST /api/register/
 POST /api/token/
 POST /api/token/refresh/
+
 Products and Categories
 GET /api/products/
 GET /api/products/<id>/
 GET /api/categories/
+
 Cart
 GET  /api/cart/
 POST /api/cart/add/
 POST /api/cart/update/
 POST /api/cart/remove/
+
 Orders
 POST /api/orders/create/
 Payments
 POST /api/payments/razorpay/create-order/
 POST /api/payments/razorpay/verify/
+
 Admin Panel
 The Django admin panel is available at:
 
@@ -127,6 +144,7 @@ npm run dev
 Then open:
 
 http://localhost:5173
+
 Notes
 PostgreSQL must be installed and running before starting the backend.
 Razorpay keys are required for online payment functionality.
